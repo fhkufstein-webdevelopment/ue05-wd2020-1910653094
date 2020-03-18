@@ -15,7 +15,7 @@
 
     <h1>Benutzerverwaltung</h1>
 
-    <table class="table table-striped userList">
+    <table class="table table-striped userList" id="UserTable">
         <thead>
         <tr>
             <th scope="col">#</th>
@@ -25,14 +25,14 @@
         </thead>
         <tbody>
         <tr>
-            <td>1</td>
+            <td id="pos">1</td>
             <td>awesomeguy01</td>
             <td><button type="button" class="btn btn-secondary btn-danger deleteTrigger" title="Löschen"><i class="fa fa-trash"></i></button></td>
         </tr>
         </tbody>
     </table>
 
-    <form class="needs-validation" novalidate>
+    <form id="formular" class="needs-validation" novalidate>
         <div class="form-row">
             <div class="col">
                 <input type="text" class="form-control" placeholder="Benutzername" id="username" required>

@@ -27,6 +27,21 @@ $(document).ready(function() {
 
         //your code follows here
 
+        var newUser = document.getElementById('username').value;
+        userListBody.push(newUser);
+        var length = userListBody.length;
+
+        var table = document.getElementById('UserTable');
+        var newRow = table.insertRow(-1);
+        var newCell1 = newRow.insertCell(0);
+        var newCell2 = newRow.insertCell(1);
+        var newCell3 = newRow.insertCell(2);
+
+        newCell1.innerHTML = length;
+        newCell2.innerHTML = newUser;
+        newCell3.innerHTML = "<button type=\"button\" class=\"btn btn-secondary btn-danger deleteTrigger\" title=\"Löschen\"><i class=\"fa fa-trash\"></i></button>";
+
+        document.getElementById("formular").reset();
         return false;
     });
 
@@ -38,6 +53,15 @@ $(document).ready(function() {
 
         //your code follows here
 
+        /*var lastRow = userListBody.length;
+        console.log(lastRow);
+        document.getElementById('UserTable').deleteRow(lastRow);
+
+        //userListBody.pop;
+        //console.log(userListBody.length);
+        userListBody.slice(0,userListBody.length); //!updated nicht die länge
+        console.log(userListBody.length);
+        document.getElementById("formular").reset();*/
 
     });
 
