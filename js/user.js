@@ -27,21 +27,25 @@ $(document).ready(function() {
 
         //your code follows here
 
-        var newUser = document.getElementById('username').value;
-        userListBody.push(newUser);
-        var length = userListBody.length;
+        var newUser = document.getElementById('username').value;//ich bekomme die Eingabe vom User (seinen Username)
+        userListBody.push(newUser);//ich füge diesen Username meiner Userliste hinzu
+        var length = userListBody.length;//ich bekomme die länge von meiner Userliste (wie viele User es gibt)
 
-        var table = document.getElementById('UserTable');
-        var newRow = table.insertRow(-1);
+        var table = document.getElementById('UserTable');//Hier bekomme ich die User Tabelle
+        var newRow = table.insertRow(-1);//ich füge eine neue Reihe der user Tabelle hinzu (an der Stelle -1 damit diese am Ende der tabelle hinzugefügt wird)
         var newCell1 = newRow.insertCell(0);
         var newCell2 = newRow.insertCell(1);
         var newCell3 = newRow.insertCell(2);
+        //Hier füge ich drei Columns meine Reihe hinzu
 
-        newCell1.innerHTML = length;
-        newCell2.innerHTML = newUser;
+        newCell1.innerHTML = length;//Erste Column steht die Position des Users
+        newCell2.innerHTML = newUser;//Zweite Column steht der Username
         newCell3.innerHTML = "<button type=\"button\" class=\"btn btn-secondary btn-danger deleteTrigger\" title=\"Löschen\"><i class=\"fa fa-trash\"></i></button>";
+        //Dritte Column ist der Löschen Button (funktionniert noch nicht aus irgendeinem Grund)
 
-        document.getElementById("formular").reset();
+        document.getElementById("formular").reset();//ich reste die tabelle damit die neue Reihe sichtbar wird
+
+
         return false;
     });
 
